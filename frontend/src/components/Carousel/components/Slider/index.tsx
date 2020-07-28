@@ -38,7 +38,7 @@ export const SliderItem = styled.li`
   }
 `;
 
-const Slider = ({ children }) => (
+const Slider: React.FC = ({ children }) => (
   <Container>
     <SlickSlider
       {...{

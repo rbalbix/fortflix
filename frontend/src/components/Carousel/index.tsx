@@ -5,7 +5,23 @@ import Slider, { SliderItem } from './components/Slider';
 import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 
-function Carousel({ ignoreFirstVideo, category }) {
+interface IProps {
+  ignoreFirstVideo?: boolean;
+  category: {
+    titulo: string;
+    cor: string;
+    link_extra?: {
+      text: string;
+      url: string;
+    };
+    videos: {
+      titulo: string;
+      url: string;
+    }[];
+  };
+}
+
+const Carousel: React.FC<IProps> = ({ ignoreFirstVideo, category }) => {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
@@ -43,6 +59,6 @@ function Carousel({ ignoreFirstVideo, category }) {
       </Slider>
     </VideoCardGroupContainer>
   );
-}
+};
 
 export default Carousel;

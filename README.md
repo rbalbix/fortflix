@@ -23,6 +23,7 @@ BalbiFlix
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
+  <a href="#demo">Demo</a>
 </p>
 
 <br>
@@ -43,6 +44,10 @@ BalbiFlix is a video / movie / series hub that helps people to find their favori
 ## License
 
 This project is under the MIT license.
+
+## Demo
+
+- [BalbiFlix](https://balbiflix.vercel.app/)
 
 ---
 

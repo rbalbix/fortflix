@@ -6,7 +6,7 @@ import Carousel from '../../components/Carousel';
 import dadosIniciais from '../../data/dados_iniciais.json';
 import PageDefault from '../../components/PageDefault';
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <PageDefault>
       <BannerMain
@@ -21,6 +21,6 @@ function Home() {
       <Carousel category={dadosIniciais.categorias[3]} />
     </PageDefault>
   );
-}
+};
 
 export default Home;
