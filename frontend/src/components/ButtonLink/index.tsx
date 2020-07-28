@@ -3,13 +3,14 @@ import React from 'react';
 import { Button } from './styles';
 
 interface iLink {
-  href: string;
+  as: any;
+  to: string;
   className: string;
 }
 
 const ButtonLink: React.FC<iLink> = (props) => {
   return (
-    <Button href={props.href} className={props.className}>
+    <Button as={props.as} to={props.to} className={props.className}>
       {props.children}
     </Button>
   );

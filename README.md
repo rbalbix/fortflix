@@ -1,17 +1,17 @@
 <h1 align="center">
-AluraFlix
+BalbiFlix
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rbalbix/aluraflix">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rbalbix/balbiflix">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rbalbix/aluraflix">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rbalbix/balbiflix">
 
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rbalbix/aluraflix">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rbalbix/balbiflix">
 
-  <img alt="Repository issues" src="https://img.shields.io/github/issues/rbalbix/aluraflix">
+  <img alt="Repository issues" src="https://img.shields.io/github/issues/rbalbix/balbiflix">
 
-  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/rbalbix/aluraflix">
+  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/rbalbix/balbiflix">
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 
@@ -38,7 +38,7 @@ This project was developed with the following technologies:
 
 ## Project
 
-AluraFlix is a video / movie / series hub that helps people to find their favorites.
+BalbiFlix is a video / movie / series hub that helps people to find their favorites.
 
 ## License
 
