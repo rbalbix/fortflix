@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import PageDefault from '../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../components/FormField';
@@ -37,6 +37,20 @@ const Categoria: React.FC = () => {
     setValues(initialValues);
   }
 
+  useEffect(() => {
+    if (window.location.href.includes('localhost')) {
+      const URL = 'http://localhost:8080/categorias';
+      fetch(URL).then(async (response) => {
+        if (response.ok) {
+          const resposta = await response.json();
+          setCategories(resposta);
+          return;
+        }
+        throw new Error('Não foi possível pegar os dados');
+      });
+    }
+  }, []);
+
   return (
     <PageDefault>
       <h1>Cadastro de categoria: {values.name}</h1>
@@ -44,21 +58,12 @@ const Categoria: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <FormField
           label='Nome da Categoria'
+          type='text'
           name='name'
           value={values.name}
           onChange={handleChange}
         />
 
-        <div>
-          <label>
-            Descrição:
-            <textarea
-              name='description'
-              value={values.description}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
         <FormField
           label='Descrição'
           type='textarea'

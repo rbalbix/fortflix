@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd ./server.ts",
+    "build": "tsc",
+    "start": "node ./dist/server.js"
+  },
+  "dependencies": {
+    "json-server": "^0.16.1",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/json-server": "^0.14.2",
+    "ts-node-dev": "^1.0.0-pre.56"
+  }
+}

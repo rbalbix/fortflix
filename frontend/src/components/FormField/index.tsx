@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { FormFieldWrapper, Label, LabelText, Input } from './styles';
 
 interface IProps {
   label: string;
@@ -17,18 +17,21 @@ const FormField: React.FC<IProps> = ({
   value,
   onChange,
 }: IProps) => {
+  const fieldId = `id_${name}`;
+
   return (
-    <div>
-      <label>
-        {label}:
-        <input
+    <FormFieldWrapper>
+      <Label htmlFor={fieldId}>
+        <Input
+          id={fieldId}
           type={type ?? 'text'}
           name={name}
           value={value}
           onChange={onChange}
         />
-      </label>
-    </div>
+        <LabelText>{label} </LabelText>
+      </Label>
+    </FormFieldWrapper>
   );
 };
 
