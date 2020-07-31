@@ -8,6 +8,7 @@ interface IProps {
   name: string;
   value: any;
   onChange: any;
+  suggestions?: any;
 }
 
 const FormField: React.FC<IProps> = ({
@@ -16,8 +17,11 @@ const FormField: React.FC<IProps> = ({
   name,
   value,
   onChange,
+  suggestions,
 }: IProps) => {
   const fieldId = `id_${name}`;
+  let hasSuggestions;
+  if (suggestions) hasSuggestions = Boolean(suggestions.length);
 
   return (
     <FormFieldWrapper>
@@ -28,8 +32,22 @@ const FormField: React.FC<IProps> = ({
           name={name}
           value={value}
           onChange={onChange}
+          autoComplete={hasSuggestions ? 'off' : 'on'}
+          list={hasSuggestions ? `suggestionFor_${fieldId}` : undefined}
         />
         <LabelText>{label} </LabelText>
+        {hasSuggestions && (
+          <datalist id={`suggestionFor_${fieldId}`}>
+            {suggestions.map((suggestion: any) => (
+              <option
+                value={suggestion}
+                key={`suggestionFor_${fieldId}_option${suggestion}`}
+              >
+                {suggestion}
+              </option>
+            ))}
+          </datalist>
+        )}
       </Label>
     </FormFieldWrapper>
   );

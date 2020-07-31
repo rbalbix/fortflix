@@ -5,7 +5,7 @@ import Slider, { SliderItem } from './components/Slider';
 import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 
-interface IProps {
+export interface IProps {
   ignoreFirstVideo?: boolean;
   category: {
     titulo: string;

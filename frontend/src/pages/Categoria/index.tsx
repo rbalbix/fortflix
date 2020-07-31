@@ -1,40 +1,25 @@
-import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import PageDefault from '../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../components/FormField';
-
-// import { Container } from './styles';
-
-interface IForm {
-  name: string;
-  description: string;
-  color: string;
-}
+import { IFormCategory as IForm, useForm } from '../../hooks/useForm';
 
 const Categoria: React.FC = () => {
   const initialValues: IForm = {
-    name: '',
+    titulo: '',
     description: '',
     color: '#454545',
   };
-  const [values, setValues] = useState(initialValues);
-  const [categories, setCategories] = useState<IForm[]>([]);
 
-  function handleChange(
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
-    const { value } = event.target;
-    setValues({
-      ...values,
-      [String(event.target.getAttribute('name'))]: value,
-    });
-  }
+  const { values, handleChange, clearForm } = useForm(initialValues);
+
+  const [categories, setCategories] = useState<IForm[]>([]);
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     setCategories([...categories, values]);
 
-    setValues(initialValues);
+    clearForm();
   }
 
   useEffect(() => {
@@ -54,14 +39,14 @@ const Categoria: React.FC = () => {
 
   return (
     <PageDefault>
-      <h1>Cadastro de categoria: {values.name}</h1>
+      <h1>Cadastro de categoria: {values.titulo}</h1>
 
       <form onSubmit={handleSubmit}>
         <FormField
           label='Nome da Categoria'
           type='text'
-          name='name'
-          value={values.name}
+          name='titulo'
+          value={values.titulo}
           onChange={handleChange}
         />
 
@@ -86,7 +71,7 @@ const Categoria: React.FC = () => {
 
       <ul>
         {categories.map((category, index) => (
-          <li key={`${category.name}${index}`}>{category.name}</li>
+          <li key={`${category.titulo}${index}`}>{category.titulo}</li>
         ))}
       </ul>
 
