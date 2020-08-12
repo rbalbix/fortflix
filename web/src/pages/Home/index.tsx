@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const URL = window.location.href.includes('localhost')
       ? 'http://localhost:8080/categorias?_embed=videos'
-      : 'https://balbiflix.herokuapp.com/categorias?_embed=videos';
+      : 'https://fortflix.herokuapp.com/categorias?_embed=videos';
 
     fetch(URL).then(async (response) => {
       if (response.ok) {
