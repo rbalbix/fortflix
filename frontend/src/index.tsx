@@ -9,13 +9,15 @@ import Cadastro from './pages/Cadastro';
 import Categoria from './pages/Categoria';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path='/' component={Home} exact />
-      <Route path='/cadastro' component={Cadastro} />
-      <Route path='/categoria' component={Categoria} />
-      <Route component={Home} />
-    </Switch>
-  </BrowserRouter>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' component={Home} exact />
+        <Route path='/cadastro' component={Cadastro} />
+        <Route path='/categoria' component={Categoria} />
+        <Route component={Home} />
+      </Switch>
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
