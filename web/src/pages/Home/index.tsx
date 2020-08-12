@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 
-// import dadosIniciais from '../../data/dados_iniciais.json';
 import PageDefault from '../../components/PageDefault';
 
 interface ICategory {

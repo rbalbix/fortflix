@@ -2,7 +2,7 @@ import React from 'react';
 
 import Slider, { SliderItem } from './components/Slider';
 
-import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
+import { VideoCardGroupContainer, Title } from './styles';
 import VideoCard from './components/VideoCard';
 
 export interface IProps {
@@ -24,20 +24,12 @@ export interface IProps {
 const Carousel: React.FC<IProps> = ({ ignoreFirstVideo, category }) => {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
-  const categoryExtraLink = category.link_extra;
   const videos = category.videos;
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
-            {categoryTitle}
-          </Title>
-          {categoryExtraLink && (
-            <ExtraLink href={categoryExtraLink.url} target='_blank'>
-              {categoryExtraLink.text}
-            </ExtraLink>
-          )}
+          <Title>{categoryTitle}</Title>
         </>
       )}
       <Slider>
@@ -48,11 +40,7 @@ const Carousel: React.FC<IProps> = ({ ignoreFirstVideo, category }) => {
 
           return (
             <SliderItem key={video.titulo}>
-              <VideoCard
-                videoTitle={video.titulo}
-                videoURL={video.url}
-                categoryColor={categoryColor}
-              />
+              <VideoCard videoTitle={video.titulo} videoURL={video.url} />
             </SliderItem>
           );
         })}

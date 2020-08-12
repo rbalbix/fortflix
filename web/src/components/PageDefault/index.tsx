@@ -1,5 +1,6 @@
 import React from 'react';
-import Menu from '../Menu';
+
+import Header from '../Header';
 import Footer from '../Footer';
 
 import { Main } from './styles';
@@ -7,7 +8,7 @@ import { Main } from './styles';
 const PageDefault: React.FC = ({ children }) => {
   return (
     <>
-      <Menu />
+      <Header />
       <Main>{children}</Main>
       <Footer />
     </>

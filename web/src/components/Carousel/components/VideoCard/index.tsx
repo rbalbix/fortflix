@@ -11,14 +11,9 @@ function getYouTubeId(youtubeURL: string) {
 interface IVideo {
   videoTitle: string;
   videoURL: string;
-  categoryColor: string;
 }
 
-const VideoCard: React.FC<IVideo> = ({
-  videoTitle,
-  videoURL,
-  categoryColor,
-}) => {
+const VideoCard: React.FC<IVideo> = ({ videoTitle, videoURL }) => {
   const image = `https://img.youtube.com/vi/${getYouTubeId(
     videoURL
   )}/hqdefault.jpg`;
@@ -27,7 +22,6 @@ const VideoCard: React.FC<IVideo> = ({
       url={image}
       href={videoURL}
       target='_blank'
-      style={{ borderColor: categoryColor || 'red' }}
       title={videoTitle}
     />
   );

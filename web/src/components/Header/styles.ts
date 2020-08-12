@@ -1,11 +1,22 @@
 import styled from 'styled-components';
 
-export const Container = styled.footer`
-  padding: 3.2rem 1.6rem;
+export const Menu = styled.nav`
+  width: 100%;
+  height: 9.4rem;
+  z-index: 100;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  background: var(--black);
 `;
 
 export const Logo = styled.img`
