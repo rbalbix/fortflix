@@ -9,6 +9,8 @@ import {
   WatchButton,
 } from './styles';
 
+import ytLogo from '../../assets/images/youtube-icon.svg';
+
 function getYouTubeId(youtubeURL: string) {
   return youtubeURL.replace(
     /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
@@ -28,7 +30,7 @@ export default function BannerMain({
   url,
 }: IBanner) {
   const youTubeID = getYouTubeId(url);
-  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
+  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/hqdefault.jpg`;
 
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
@@ -43,7 +45,9 @@ export default function BannerMain({
 
         <ContentAreaContainerItem>
           <VideoIframeResponsive youtubeID={youTubeID} />
-          <WatchButton>Assistir</WatchButton>
+          <WatchButton href={url} target='_blank'>
+            <img src={ytLogo} alt='YouTube Logo' style={{ width: '10rem' }} />
+          </WatchButton>
         </ContentAreaContainerItem>
       </ContentAreaContainer>
     </BannerMainContainer>

@@ -20,7 +20,7 @@ export const Button = styled.button`
     opacity: 0.5;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     position: fixed;
     left: 0;
     right: 0;

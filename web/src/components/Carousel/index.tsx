@@ -23,7 +23,6 @@ export interface IProps {
 
 const Carousel: React.FC<IProps> = ({ ignoreFirstVideo, category }) => {
   const categoryTitle = category.titulo;
-  const categoryColor = category.cor;
   const videos = category.videos;
   return (
     <VideoCardGroupContainer>

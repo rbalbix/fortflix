@@ -43,7 +43,7 @@ const Slider: React.FC = ({ children }) => (
     <SlickSlider
       {...{
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         centerMode: false,
         variableWidth: true,
