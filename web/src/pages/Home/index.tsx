@@ -1,63 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { lazy, Suspense } from 'react';
+import useFetch from '../../hooks/useFetch';
 
-import BannerMain from '../../components/BannerMain';
-import Carousel from '../../components/Carousel';
+import MasterPage from '../../components/MasterPage';
+import Loading from '../../components/Loading';
 
-import PageDefault from '../../components/PageDefault';
+const Banner = lazy(() => import('../../components/Banner'));
+const Carousel = lazy(() => import('../../components/Carousel'));
 
 interface ICategory {
-  id: string | number | undefined;
+  id: number;
   titulo: string;
-  cor: string;
-  link_extra?: {
-    text: string;
-    url: string;
-  };
   videos: {
     titulo: string;
     url: string;
-    description: string;
   }[];
 }
 
 const Home: React.FC = () => {
-  const [dadosIniciais, setDadosIniciais] = useState<ICategory[]>([]);
-  useEffect(() => {
-    const URL = window.location.href.includes('localhost')
-      ? 'http://localhost:8080/categorias?_embed=videos'
-      : 'https://fortflix.herokuapp.com/categorias?_embed=videos';
+  const { data } = useFetch('categorias?_embed=videos');
 
-    fetch(URL).then(async (response) => {
-      if (response.ok) {
-        const resposta = await response.json();
-        setDadosIniciais(resposta);
-        return;
-      }
-      throw new Error('Não foi possível pegar os dados');
-    });
-  }, []);
+  if (!data) {
+    return (
+      <MasterPage>
+        <Loading />
+      </MasterPage>
+    );
+  }
 
   return (
-    <PageDefault>
-      {dadosIniciais.length === 0 && <div>Loading...</div>}
+    <MasterPage>
+      <Suspense fallback={<Loading />}>
+        <Banner
+          videoTitle={data[0].videos[0].titulo}
+          url={data[0].videos[0].url}
+        />
 
-      {dadosIniciais.map((categoria: ICategory, indice) => {
-        if (indice === 0) {
-          return (
-            <div key={categoria.id}>
-              <BannerMain
-                videoTitle={dadosIniciais[0]?.videos[0]?.titulo}
-                url={dadosIniciais[0]?.videos[0]?.url}
-                videoDescription={dadosIniciais[0]?.videos[0]?.description}
-              />
-              <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
-            </div>
-          );
-        }
-
-        return <Carousel key={categoria.id} category={categoria} />;
-      })}
-    </PageDefault>
+        {data.map((category: ICategory) => (
+          <Carousel key={category.id} category={category} />
+        ))}
+      </Suspense>
+    </MasterPage>
   );
 };
 

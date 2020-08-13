@@ -2,53 +2,27 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Populares em LBalbi Gamer",
-      "cor": "#6BD1FF",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
+      "titulo": "Populares em LBalbi Gamer"
     },
     {
       "id": 2,
-      "titulo": "Meus Amigos",
-      "cor": "#00C86F",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
+      "titulo": "Meus Amigos"
     },
     {
       "id": 3,
-      "titulo": "Minha lista de Favoritos",
-      "cor": "#9cd33b",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
+      "titulo": "Minha lista de Favoritos"
     },
     {
       "id": 4,
-      "titulo": "PRO Players",
-      "cor": "orange"
+      "titulo": "PRO Players"
     },
     {
       "id": 5,
-      "titulo": "Todos os vídeos de LBalbi Gamer",
-      "cor": "red",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
+      "titulo": "Todos os vídeos de LBalbi Gamer"
     },
     {
       "id": 6,
-      "titulo": "Futebol",
-      "cor": "red",
-      "link_extra": {
-        "text": "",
-        "url": ""
-      }
+      "titulo": "Futebol"
     }
   ],
   "videos": [

@@ -5,7 +5,7 @@ import Footer from '../Footer';
 
 import { Main } from './styles';
 
-const PageDefault: React.FC = ({ children }) => {
+const MasterPage: React.FC = ({ children }) => {
   return (
     <>
       <Header />
@@ -15,4 +15,4 @@ const PageDefault: React.FC = ({ children }) => {
   );
 };
 
-export default PageDefault;
+export default MasterPage;

@@ -9,11 +9,7 @@ export interface IProps {
   ignoreFirstVideo?: boolean;
   category: {
     titulo: string;
-    cor: string;
-    link_extra?: {
-      text: string;
-      url: string;
-    };
+
     videos: {
       titulo: string;
       url: string;

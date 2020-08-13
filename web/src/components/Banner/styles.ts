@@ -52,15 +52,14 @@ export const ContentAreaContainerDescription = styled.p`
 `;
 
 export const ContentAreaContainerTitle = styled.h2`
-  font-style: normal;
-  font-weight: 300;
-  font-size: 40px;
-  line-height: 1;
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-size: 4rem;
   margin-top: 0;
   margin-bottom: 2rem;
 
   @media (max-width: 700px) {
-    font-size: 32px;
+    font-size: 3.2rem;
     text-align: center;
   }
 `;

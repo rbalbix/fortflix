@@ -20,15 +20,10 @@ function getYouTubeId(youtubeURL: string) {
 
 interface IBanner {
   videoTitle: string;
-  videoDescription: string;
   url: string;
 }
 
-export default function BannerMain({
-  videoTitle,
-  videoDescription,
-  url,
-}: IBanner) {
+export default function Banner({ videoTitle, url }: IBanner) {
   const youTubeID = getYouTubeId(url);
   const bgUrl = `https://img.youtube.com/vi/${youTubeID}/hqdefault.jpg`;
 
@@ -37,10 +32,6 @@ export default function BannerMain({
       <ContentAreaContainer>
         <ContentAreaContainerItem>
           <ContentAreaContainerTitle>{videoTitle}</ContentAreaContainerTitle>
-
-          <ContentAreaContainerDescription>
-            {videoDescription}
-          </ContentAreaContainerDescription>
         </ContentAreaContainerItem>
 
         <ContentAreaContainerItem>

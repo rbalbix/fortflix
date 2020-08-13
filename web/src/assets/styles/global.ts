@@ -8,16 +8,11 @@ const GlobalStyle = createGlobalStyle`
 }
 
 :root {
-  font-size: 60%;
+  font-size: 62.5%;
 
-  --primary: #2a7ae4;
   --black: #222222;
-  --blackLighter: #9e9e9e;
-  --grayLight: #f5f5f5;
-  --grayMedium: #e5e5e5;
-  --white: #ffffff;
-  --frontEnd: #6bd1ff;
-  --backEnd: #00c86f;
+  --white: #fffff3;
+  --color-loading: #2b2b2b;
 }
 
 html,
@@ -26,6 +21,7 @@ body {
   padding: 0;
 
   background-color: var(--black);
+  color: var(--white);
 }
 
 a {
@@ -33,7 +29,6 @@ a {
 }
 
 #root {
-  min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
   flex-direction: column;
 }
