@@ -46,7 +46,7 @@ export default function BannerMain({
         <ContentAreaContainerItem>
           <VideoIframeResponsive youtubeID={youTubeID} />
           <WatchButton href={url} target='_blank'>
-            <img src={ytLogo} alt='YouTube Logo' style={{ width: '10rem' }} />
+            <img src={ytLogo} alt='YouTube Logo' style={{ width: '8rem' }} />
           </WatchButton>
         </ContentAreaContainerItem>
       </ContentAreaContainer>

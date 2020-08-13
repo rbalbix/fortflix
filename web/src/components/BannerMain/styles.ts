@@ -18,7 +18,7 @@ export const ContentAreaContainer = styled.section`
 export const ContentAreaContainerItem = styled.div`
   width: 50%;
   display: inline-block;
-  margin-bottom: 50px;
+  /* margin-bottom: 0rem; */
   @media (max-width: 700px) {
     width: 100%;
   }
@@ -57,7 +57,7 @@ export const ContentAreaContainerTitle = styled.h2`
   font-size: 40px;
   line-height: 1;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 
   @media (max-width: 700px) {
     font-size: 32px;
