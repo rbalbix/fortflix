@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Slider, { SliderItem } from './components/Slider';
+import Slider from '../Slider';
 
-import { VideoCardGroupContainer, Title } from './styles';
-import VideoCard from './components/VideoCard';
+import { Container, Title, Item } from './styles';
+import VideoCard from '../VideoCard';
 
 export interface IProps {
-  ignoreFirstVideo?: boolean;
   category: {
     titulo: string;
-
     videos: {
       titulo: string;
       url: string;
@@ -17,30 +15,21 @@ export interface IProps {
   };
 }
 
-const Carousel: React.FC<IProps> = ({ ignoreFirstVideo, category }) => {
-  const categoryTitle = category.titulo;
-  const videos = category.videos;
-  return (
-    <VideoCardGroupContainer>
-      {categoryTitle && (
-        <>
-          <Title>{categoryTitle}</Title>
-        </>
-      )}
-      <Slider>
-        {videos.map((video, index) => {
-          if (ignoreFirstVideo && index === 0) {
-            return null;
-          }
+const Carousel: React.FC<IProps> = ({ category }) => {
+  const { titulo, videos } = category;
 
-          return (
-            <SliderItem key={video.titulo}>
-              <VideoCard videoTitle={video.titulo} videoURL={video.url} />
-            </SliderItem>
-          );
-        })}
+  return (
+    <Container>
+      <Title>{titulo}</Title>
+
+      <Slider>
+        {videos.map(({ titulo, url }) => (
+          <Item key={titulo}>
+            <VideoCard title={titulo} url={url} />
+          </Item>
+        ))}
       </Slider>
-    </VideoCardGroupContainer>
+    </Container>
   );
 };
 

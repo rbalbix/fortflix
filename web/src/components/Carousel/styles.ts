@@ -1,24 +1,22 @@
 import styled from 'styled-components';
 
-export const VideoCardGroupContainer = styled.section`
-  /* color: white; */
-  /* min-height: 19.7rem; */
-
-  /* margin-top: 1.6rem; */
-  /* margin-left: 5%; */
-  /* margin-bottom: 1.6rem; */
-
+export const Container = styled.section`
   margin: 1.6rem 0;
 `;
 
 export const Title = styled.h3`
-  font-weight: normal;
-  font-size: 2.4rem;
+  font: 400 1.6rem Roboto;
   letter-spacing: 0.1rem;
 
   margin-bottom: 0.5rem;
+`;
 
-  @media (max-width: 700px) {
-    font-size: 1.8rem;
+export const Item = styled.li`
+  margin-right: 0.8rem;
+
+  img {
+    width: 29.8rem;
+    height: 16.6rem;
+    object-fit: cover;
   }
 `;

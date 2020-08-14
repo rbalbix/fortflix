@@ -1,22 +1,11 @@
 import React from 'react';
-import VideoIframeResponsive from './components/VideoIframeResponsive';
-import {
-  BannerMainContainer,
-  ContentAreaContainer,
-  ContentAreaContainerItem,
-  ContentAreaContainerDescription,
-  ContentAreaContainerTitle,
-  WatchButton,
-} from './styles';
 
-import ytLogo from '../../assets/images/youtube-icon.svg';
+import Video from '../Video';
+import { getYouTubeId } from '../../utils';
 
-function getYouTubeId(youtubeURL: string) {
-  return youtubeURL.replace(
-    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-    '$7'
-  );
-}
+import logo from '../../assets/images/youtube-icon.svg';
+
+import { Container, Content, Item, Title, VideoButton, Logo } from './styles';
 
 interface IBanner {
   videoTitle: string;
@@ -24,23 +13,23 @@ interface IBanner {
 }
 
 export default function Banner({ videoTitle, url }: IBanner) {
-  const youTubeID = getYouTubeId(url);
-  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/hqdefault.jpg`;
+  const videoId = getYouTubeId(url);
+  const bgUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   return (
-    <BannerMainContainer backgroundImage={bgUrl}>
-      <ContentAreaContainer>
-        <ContentAreaContainerItem>
-          <ContentAreaContainerTitle>{videoTitle}</ContentAreaContainerTitle>
-        </ContentAreaContainerItem>
+    <Container backgroundImage={bgUrl}>
+      <Content>
+        <Item>
+          <Title>{videoTitle}</Title>
+        </Item>
 
-        <ContentAreaContainerItem>
-          <VideoIframeResponsive youtubeID={youTubeID} />
-          <WatchButton href={url} target='_blank'>
-            <img src={ytLogo} alt='YouTube Logo' style={{ width: '8rem' }} />
-          </WatchButton>
-        </ContentAreaContainerItem>
-      </ContentAreaContainer>
-    </BannerMainContainer>
+        <Item>
+          <Video videoId={videoId} />
+          <VideoButton href={url}>
+            <Logo src={logo} alt='Video Logo' />
+          </VideoButton>
+        </Item>
+      </Content>
+    </Container>
   );
 }
