@@ -1,4 +1,7 @@
 {
+  "banner": {
+    "url": "https://www.youtube.com/watch?v=2rx5cnTi4tY"
+  },
   "categorias": [
     {
       "id": 1,
@@ -10,18 +13,22 @@
     },
     {
       "id": 3,
-      "titulo": "Minha lista de Favoritos"
+      "titulo": "Highlights"
     },
     {
       "id": 4,
-      "titulo": "PRO Players"
+      "titulo": "Minha lista de Favoritos"
     },
     {
       "id": 5,
-      "titulo": "Todos os vídeos de LBalbi Gamer"
+      "titulo": "PRO Players"
     },
     {
       "id": 6,
+      "titulo": "Todos os vídeos de LBalbi Gamer"
+    },
+    {
+      "id": 7,
       "titulo": "Futebol"
     }
   ],
@@ -107,187 +114,187 @@
     },
     {
       "id": 14,
-      "categoriaId": 3,
+      "categoriaId": 4,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=ruF8ALG7YVU"
     },
     {
       "id": 15,
-      "categoriaId": 3,
+      "categoriaId": 4,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=D0hg7gHgByo"
     },
     {
       "id": 16,
-      "categoriaId": 3,
+      "categoriaId": 4,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=Zu_Iq7Bl4r8"
     },
     {
       "id": 17,
-      "categoriaId": 3,
+      "categoriaId": 4,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=XaPZ_dWy9d4"
     },
     {
       "id": 18,
-      "categoriaId": 3,
+      "categoriaId": 4,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=g4VuQ4qN1jU"
     },
     {
       "id": 19,
-      "categoriaId": 4,
+      "categoriaId": 5,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=3y4Dmva_M8U"
     },
     {
       "id": 20,
-      "categoriaId": 4,
+      "categoriaId": 5,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=9Pe7UpvZJyk"
     },
     {
       "id": 21,
-      "categoriaId": 4,
+      "categoriaId": 5,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=TiSx2TgYvXk"
     },
     {
       "id": 22,
-      "categoriaId": 4,
+      "categoriaId": 5,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=ZZ0Tt2aeL4Q"
     },
     {
       "id": 23,
-      "categoriaId": 4,
+      "categoriaId": 5,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=4RLIJNoOF8I"
     },
     {
       "id": 24,
-      "categoriaId": 4,
+      "categoriaId": 5,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=bzua12GHDFI"
     },
     {
       "id": 25,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=U_hI4OG3hAw"
     },
     {
       "id": 26,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=-Xdw5xnY29U&t=2s"
     },
     {
       "id": 27,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=XCv-qVKpHz4"
     },
     {
       "id": 28,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=0CIZ1gkAag0"
     },
     {
       "id": 29,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=Z1eqvDTyt1o"
     },
     {
       "id": 30,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=kEbQpUcc6Xc"
     },
     {
       "id": 31,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=xdia1O8HNEs&t=28s"
     },
     {
       "id": 32,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=CpMDPfsl4Zw&t=62s"
     },
     {
       "id": 33,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=tL0lQZy877k&t=2s"
     },
     {
       "id": 34,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=M10ydt5I-J4&t=5s"
     },
     {
       "id": 35,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=VoG0vHdpVR4"
     },
     {
       "id": 36,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=iZZp07ULxcY&t=4s"
     },
     {
       "id": 37,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=zBdXAE3GFsg&t=2s"
     },
     {
       "id": 38,
-      "categoriaId": 5,
+      "categoriaId": 6,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=L7Y95sSdODQ&t=301s"
     },
     {
       "id": 39,
-      "categoriaId": 6,
+      "categoriaId": 7,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=bwfF1Wtqlzo"
     },
     {
       "id": 40,
-      "categoriaId": 6,
+      "categoriaId": 7,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=kZxn-0uoqV8"
     },
     {
       "id": 41,
-      "categoriaId": 6,
+      "categoriaId": 7,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=oJYWy3Qjptc"
     },
     {
       "id": 42,
-      "categoriaId": 6,
+      "categoriaId": 7,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=mvMwmFbr8kQ"
     },
     {
       "id": 43,
-      "categoriaId": 6,
+      "categoriaId": 7,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=Vul7TyCPd3A"
     },
     {
       "id": 44,
-      "categoriaId": 6,
+      "categoriaId": 7,
       "titulo": "",
       "url": "https://www.youtube.com/watch?v=Ny9Eu5wJ4KY"
     },
@@ -296,6 +303,30 @@
       "categoriaId": 1,
       "titulo": "OS CARROS",
       "url": "https://www.youtube.com/watch?v=L7Y95sSdODQ"
+    },
+    {
+      "id": 46,
+      "categoriaId": 3,
+      "titulo": "",
+      "url": "https://www.youtube.com/watch?v=2rx5cnTi4tY"
+    },
+    {
+      "id": 47,
+      "categoriaId": 3,
+      "titulo": "",
+      "url": "https://www.youtube.com/watch?v=zBdXAE3GFsg"
+    },
+    {
+      "id": 48,
+      "categoriaId": 3,
+      "titulo": "",
+      "url": "https://www.youtube.com/watch?v=tL0lQZy877k"
+    },
+    {
+      "id": 49,
+      "categoriaId": 3,
+      "titulo": "",
+      "url": "https://www.youtube.com/watch?v=Z1eqvDTyt1o"
     }
   ]
 }

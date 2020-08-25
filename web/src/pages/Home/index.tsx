@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 
 import MasterPage from '../../components/MasterPage';
@@ -17,9 +17,20 @@ interface ICategory {
 }
 
 const Home: React.FC = () => {
+  const { data: banner } = useFetch('banner');
   const { data } = useFetch('categorias?_embed=videos');
 
-  if (!data) {
+  const [title, setTitle] = useState('');
+
+  useEffect(() => {
+    if (banner) {
+      fetch(
+        `https://noembed.com/embed?url=${banner.url}`
+      ).then(async (response) => setTitle((await response.json()).title));
+    }
+  }, [banner]);
+
+  if (!data || !banner) {
     return (
       <MasterPage>
         <Loading />
@@ -30,10 +41,7 @@ const Home: React.FC = () => {
   return (
     <MasterPage>
       <Suspense fallback={<Loading />}>
-        <Banner
-          videoTitle={data[0].videos[0].titulo}
-          url={data[0].videos[0].url}
-        />
+        <Banner videoTitle={title} url={banner.url} />
 
         {data.map((category: ICategory) => (
           <Carousel key={category.id} category={category} />
