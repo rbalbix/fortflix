@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 90vw;
-  height: 70vh;
+  height: 40rem;
 
   max-width: 900px;
 
@@ -22,8 +22,8 @@ export const Content = styled.div`
   align-items: center;
 
   border: 0.01rem solid var(--color-border);
-  margin: 0 auto;
-  padding: 4rem 1rem;
+  margin: 45px auto 0;
+  padding: 2rem 1rem;
 
   > form {
     width: 70vw;
@@ -60,6 +60,6 @@ export const Content = styled.div`
 
 export const Caption = styled.h1`
   font-size: 4rem;
-  line-height: 5rem;
+  line-height: 4.5rem;
   letter-spacing: 2px;
 `;
