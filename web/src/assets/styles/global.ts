@@ -13,6 +13,14 @@ const GlobalStyle = createGlobalStyle`
   --black: #222222;
   --white: #fffff3;
   --color-loading: #2b2b2b;
+  --color-border:#333333;
+
+  --color-primary-light: #916BEA;
+  --color-primary: #8257E5;
+  --color-primary-dark: #774DD6;
+
+  --color-input-background: #53585d;
+  --color-line-in-white: #E6E6F0;
 }
 
 html,
